@@ -1,0 +1,2 @@
+Distance from 2 to 3 equals 30 unit(s)
+Path: 2 -> 3

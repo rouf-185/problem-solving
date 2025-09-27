@@ -1,0 +1,2 @@
+Distance from 0 to 1 equals 30 unit(s)
+Path: 0 -> 1

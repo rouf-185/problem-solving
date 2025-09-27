@@ -1,0 +1,2 @@
+Distance from 3 to 3 equals 0 unit(s)
+Path: 3

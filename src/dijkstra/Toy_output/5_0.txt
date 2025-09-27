@@ -1,0 +1,2 @@
+Distance from 5 to 0 equals 80 unit(s)
+Path: 5 -> 2 -> 0

@@ -1,0 +1,2 @@
+Distance from 6 to 4 equals 20 unit(s)
+Path: 6 -> 4

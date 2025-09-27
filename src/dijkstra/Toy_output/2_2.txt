@@ -1,0 +1,2 @@
+Distance from 2 to 2 equals 0 unit(s)
+Path: 2

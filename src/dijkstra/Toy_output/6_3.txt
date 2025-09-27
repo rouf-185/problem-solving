@@ -1,0 +1,2 @@
+Distance from 6 to 3 equals 60 unit(s)
+Path: 6 -> 3

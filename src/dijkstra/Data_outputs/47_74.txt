@@ -1,0 +1,2 @@
+Distance from 47 to 74 equals 16 unit(s)
+Path: 47 -> 98 -> 9 -> 80 -> 19 -> 83 -> 55 -> 67 -> 74

@@ -1,0 +1,2 @@
+Distance from 4 to 4 equals 0 unit(s)
+Path: 4

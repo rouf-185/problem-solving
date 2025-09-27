@@ -1,0 +1,2 @@
+Distance from 3 to 0 equals 50 unit(s)
+Path: 3 -> 1 -> 0

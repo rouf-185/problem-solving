@@ -1,0 +1,2 @@
+Distance from 54 to 47 equals 18 unit(s)
+Path: 54 -> 53 -> 16 -> 55 -> 83 -> 76 -> 21 -> 97 -> 8 -> 47

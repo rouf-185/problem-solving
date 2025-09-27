@@ -1,0 +1,2 @@
+Distance from 82 to 27 equals 12 unit(s)
+Path: 82 -> 43 -> 83 -> 73 -> 27
