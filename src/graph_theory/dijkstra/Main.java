@@ -1,3 +1,4 @@
+package graph_theory.dijkstra;
 import java.io.*;
 import java.util.*;
 
