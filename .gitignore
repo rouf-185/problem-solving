@@ -7,3 +7,5 @@
 .idea/*
 problem-solving.iml
 *.iml
+
+.DS_Store
