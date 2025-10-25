@@ -1,4 +1,5 @@
 package leetcode.meta.course_schedule_207;
+import java.util.*;
 
 public class Solution {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
@@ -22,6 +23,11 @@ public class Solution {
             int top = queue.poll();
             visitedNodes++;
             for(int nei : adj.get(top)) {
+                // since top is already visited which means this course is done
+                // that means any edges goes from top top nei should be deleted 
+                // because is no prerequisite between top and nei anymore
+                // that is why we're reducing the indegree for nei
+                // this is the core intuition
                 indegree[nei]--;
                 if(indegree[nei] == 0) {
                     queue.add(nei);
