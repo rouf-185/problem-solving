@@ -1,9 +1,7 @@
 package leetcode.meta.continuous_subarray_sum_523;
 
-import java.util.*;
 public class Solution {
     public boolean checkSubarraySum(int[] nums, int k) {
-        int[] prefixSum = new int[nums.length];
         int sum = 0;
         Map<Integer, Integer> remainderIdxMap = new HashMap<>();
         remainderIdxMap.put(0, -1); 
@@ -12,8 +10,7 @@ public class Solution {
         //index is right before the 0th index which is -1
         for(int i = 0; i < nums.length; i++) {
             sum += nums[i];
-            prefixSum[i] = sum;
-            int currentRemainder = prefixSum[i] % k;
+            int currentRemainder = sum % k;
             if(remainderIdxMap.containsKey(currentRemainder)) {
                 if(i - remainderIdxMap.get(currentRemainder) > 1) {
                     return true;
