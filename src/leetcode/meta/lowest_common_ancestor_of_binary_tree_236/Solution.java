@@ -2,7 +2,7 @@ package leetcode.meta.lowest_common_ancestor_of_binary_tree_236;
 
 import java.util.*;
 
-public class TreeNode {
+class TreeNode {
      int val;
      TreeNode left;
      TreeNode right;

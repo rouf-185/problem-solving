@@ -1,4 +1,4 @@
-package leetcode.daily_challenge.october_24_divide_player_into_equal_skill_04;
+package leetcode.daily_challenge.october_24.divide_players_into_team_of_equal_skill_04;
 
 import java.util.Arrays;
 

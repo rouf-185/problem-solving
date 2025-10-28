@@ -1,5 +1,5 @@
 package leetcode.meta.random_pick_398;
-
+import java.util.*;
 public class Solution {
     private Map<Integer, Queue<Integer>> map;
     public Solution(int[] nums) {

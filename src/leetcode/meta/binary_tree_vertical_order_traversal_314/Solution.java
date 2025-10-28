@@ -1,5 +1,7 @@
 package leetcode.meta.binary_tree_vertical_order_traversal_314;
+import java.util.*;
 
+import leetcode.two_thousand_24.bst.TreeNode;
 public class Solution {
     public List<List<Integer>> verticalOrder(TreeNode root) {
         List<List<Integer>> ans = new ArrayList<>();

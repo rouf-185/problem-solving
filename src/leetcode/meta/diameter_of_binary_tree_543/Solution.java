@@ -1,7 +1,6 @@
-package leetcode.meta.diameter)=_of_binary_tree_543;
+package leetcode.meta.diameter_of_binary_tree_543;
 
-
-public TreeNode {
+class TreeNode {
     int val;
     TreeNode left;
     TreeNode right;

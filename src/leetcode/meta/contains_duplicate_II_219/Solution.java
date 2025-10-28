@@ -1,5 +1,7 @@
 package leetcode.meta.contains_duplicate_II_219;
 
+import java.util.*;
+
 public class Solution {
     public boolean containsNearbyDuplicate(int[] nums, int k) {
         Set<Integer> set = new HashSet<>();

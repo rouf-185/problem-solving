@@ -1,6 +1,6 @@
 package leetcode.meta.longest_palindrome_substring_5;
 
-public class Solution {
+public class BruteforceBetter {
     private boolean isPalindrome(int start, int end, String s) {
         while(start < end) {
             if(s.charAt(start) != s.charAt(end)) {

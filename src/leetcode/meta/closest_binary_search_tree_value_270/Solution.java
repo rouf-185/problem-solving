@@ -1,5 +1,7 @@
 package leetcode.meta.closest_binary_search_tree_value_270;
 
+import leetcode.two_thousand_24.bst.TreeNode;
+
 public class Solution {
     private int ans;
     private void traverse(TreeNode node, double target) {

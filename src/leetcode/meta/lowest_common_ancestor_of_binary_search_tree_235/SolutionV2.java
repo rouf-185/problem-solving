@@ -7,7 +7,7 @@ class TreeNode {
     TreeNode(int x) { val = x; }
 }
 
-public class Solution {
+public class SolutionV2 {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         TreeNode itr = root;
         boolean leftCond = (itr.val > p.val && itr.val > q.val);

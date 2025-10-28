@@ -1,5 +1,7 @@
 package leetcode.meta.sum_root_to_leaf_numbers_129;
 
+import leetcode.two_thousand_24.bst.TreeNode;
+
 public class Solution {
     private int ans;
     private void traverse(TreeNode node, int sum) {

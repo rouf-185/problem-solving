@@ -7,7 +7,7 @@ class TreeNode {
     TreeNode(int x) { val = x; }
 }
 
-public class Solution {
+public class SolutionV1 {
     TreeNode lca;
     // write simple dfs
     boolean dfs(TreeNode node, TreeNode p, TreeNode q) {

@@ -1,10 +1,10 @@
 package leetcode.meta.sparsevector_1570;
 
-import java.import.*;
+import java.util.*;
 
-public class SparseVector {
+public class SparseVectorV2 {
     private Map<Integer, Integer> map;
-    SparseVector(int[] nums) {
+    public SparseVectorV2(int[] nums) {
         map = new HashMap<>();
         for(int i = 0; i < nums.length; i++) {
             if(nums[i] != 0) {
@@ -14,7 +14,7 @@ public class SparseVector {
     }
     
 	// Return the dotProduct of two sparse vectors
-    public int dotProduct(SparseVector vec) {
+    public int dotProduct(SparseVectorV2 vec) {
         Map<Integer, Integer> small = this.map.size() >= vec.map.size() ? vec.map : this.map;
         Map<Integer, Integer> large = this.map.size() < vec.map.size() ? vec.map : this.map;
         int sum = 0;

@@ -1,6 +1,6 @@
 package leetcode.meta.course_schedule_207;
-
-public class Solution {
+import java.util.*;
+public class SolutionV2 {
     private boolean dfs(List<List<Integer>> adj, boolean[] visited, int x, Set<Integer> instack) {
         if(instack.contains(x)) {
             return true;
