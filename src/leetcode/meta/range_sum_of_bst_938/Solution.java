@@ -28,3 +28,26 @@ public class Solution {
         }
     }
 }
+
+class SolutionBetter {
+    int ans;
+    private void dfs(TreeNode node, int low, int high) {
+        if(node == null) {
+            return;
+        } 
+        if(node.val >= low && node.val <= high) {
+            this.ans += node.val;
+        }
+        if(low < node.val) { // if the node.val is clearly greater than low that implies that the left subtree has more node in this range
+            dfs(node.left, low, high);
+        }
+        if(node.val < high) { // if the node.val is clearly less than high that implies that the right subtree has more node in this range
+            dfs(node.right, low, high);
+        }
+    }
+    public int rangeSumBST(TreeNode root, int low, int high) {
+        this.ans = 0;
+        dfs(root, low, high);
+        return ans;
+    }
+}
