@@ -1,5 +1,5 @@
 package leetcode.meta.random_pick_with_weight_528;
-
+import java.util.*;
 public class Solution {
     private Random rand;
     private int[] prefixsum;
