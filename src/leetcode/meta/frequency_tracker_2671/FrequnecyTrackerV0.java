@@ -2,7 +2,7 @@ package leetcode.meta.frequency_tracker_2671;
 
 import java.util.*;
 
-public class FrequencyTracker {
+public class FrequencyTrackerV0 {
     private Map<Integer, Set<Integer>> freqMap;
     private Map<Integer, Integer> numMap;
     public FrequencyTracker() {
