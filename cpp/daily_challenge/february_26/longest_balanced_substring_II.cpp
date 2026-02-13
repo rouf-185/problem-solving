@@ -1,6 +1,5 @@
 #include <iostream>
-#include <bits\cpp.h>
-
+#include <bits/stdc++.h>
 class Solution {
 public:
     long long getKey(int a, int b) {
