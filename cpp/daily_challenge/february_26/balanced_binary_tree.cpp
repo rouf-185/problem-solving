@@ -1,32 +1,30 @@
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
-
-struct TreeNode {
-      int val;
-      TreeNode *left;
-      TreeNode *right;
-      TreeNode() : val(0), left(nullptr), right(nullptr) {}
-      TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-      TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- };
- 
 class Solution {
+private:
 public:
-    pair<bool, int> calculate(TreeNode* node) {
+    void inorder(TreeNode* node, vector<int>& elements) {
         if(node == nullptr) {
-            return {true, 0};
+            return;
         }
-        pair<bool, int> leftInfo = calculate(node->left);
-        pair<bool, int> rightInfo = calculate(node->right);
-        int newDepth = max(leftInfo.second, rightInfo.second) + 1;
-        if(abs(leftInfo.second - rightInfo.second) > 1 || (leftInfo.first & rightInfo.first) == false) {
-            return {false, newDepth};
-        } else {
-            return {true, newDepth};
-        }
+        inorder(node->left, elements);
+        elements.push_back(node->val);
+        inorder(node->right, elements);
     }
-    bool isBalanced(TreeNode* root) {
-        return calculate(root).first;
+    TreeNode* construct(vector<int>& elements, int left, int right) {
+        if(left > right) {
+            return nullptr;
+        }
+        int mid = left + (right - left)/2;
+        TreeNode* leftTree = construct(elements, left, mid - 1);
+        TreeNode* rightTree = construct(elements, mid + 1, right);
+        TreeNode* node = new TreeNode(elements[mid], leftTree, rightTree);
+        return node;
+    }
+    TreeNode* balanceBST(TreeNode* root) {
+        vector<int> elements;
+        inorder(root, elements);
+        return construct(elements, 0, elements.size() - 1);
     }
 };
