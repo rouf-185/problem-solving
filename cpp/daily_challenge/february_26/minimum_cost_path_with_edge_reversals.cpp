@@ -1,6 +1,8 @@
 #include <iostream>
 #include <bits/stdc++.h>
 
+using namespace std;
+
 class Solution {
 public:
     int calculateDistance(vector<vector<pair<int, int>>> adj, int from, int to) {
@@ -9,14 +11,14 @@ public:
         pq.push({0, from});
         dist[from] = 0;
         while(!pq.empty()) {
-            pair<int, int> item = pq.top();
+            pair<int, int> topItem = pq.top();
             pq.pop();
-            if(item.second == to) {
+            if(topItem.second == to) {
                 return dist[to];
             }
-            for(auto& nei : adj[item.second]) {
-                if(dist[nei.second] > dist[item.second] + nei.first) {
-                    dist[nei.second] = dist[item.second] + nei.first;
+            for(auto& nei : adj[topItem.second]) {
+                if(dist[nei.second] > topItem.first + nei.first) {
+                    dist[nei.second] = topItem.first + nei.first;
                     pq.push({dist[nei.second], nei.second});
                 }
             }
@@ -28,10 +30,10 @@ public:
         for(auto& edge : edges) {
             int from = edge[0];
             int to = edge[1];
-            int w = edge[2];
-            adj[from].push_back({w, to});
-            adj[to].push_back({2 * w, from});
+            int weight = edge[2];
+            adj[from].push_back({weight, to});
+            adj[to].push_back({2 * weight, from});
         }
-        return calculateDistance(adj, 0, n-1);
+        return calculateDistance(adj, 0, n - 1);
     }
 };
