@@ -1,4 +1,4 @@
 # problem-solving
-I like to spend my leisure time working on this repo. If you're new to problem solving with C++, Java and Go, you might find it useful!
+I enjoy spending my leisure time contributing to this repository. If you're getting started with problem-solving in C++, Java, or Go, you may find it helpful as well.
 
-Thanks for stopping by—feel free to leave a ⭐ if you found it useful. Wishing you all the best on your problem solving journey! 🚀
+Thank you for stopping by. If you found it useful, feel free to leave a star. Wishing you all the best on your problem-solving journey.
