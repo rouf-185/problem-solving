@@ -1,4 +1,4 @@
-import leetcode.daily_challenge.june_26.maximum_building_height_20;
+package leetcode.daily_challenge.june_26.maximum_building_height_20;
 
 public class Solution {
     public int maxBuilding(int num, int[][] restrictions) {
