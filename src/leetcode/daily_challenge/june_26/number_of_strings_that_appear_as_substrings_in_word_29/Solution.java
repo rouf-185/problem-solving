@@ -15,3 +15,30 @@ public class Solution {
         return count;
     }
 }
+
+class SolutionV2 {
+    private boolean existIn(String word, String pattern) {
+        for(int i = 0; i < word.length() - pattern.length() + 1; i++) {
+            boolean isMatch = true;
+            for(int j = 0; j < pattern.length(); j++) {
+                if(pattern.charAt(j) != word.charAt(i + j)) {
+                    isMatch = false;
+                    break;
+                }
+            }
+            if(isMatch) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public int numOfStrings(String[] patterns, String word) {
+        int count = 0;
+        for(String pattern : patterns) {
+            if(existIn(word, pattern)) {
+                count++;
+            }
+        }
+        return count;
+    }
+}
