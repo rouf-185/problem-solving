@@ -17,4 +17,10 @@ public class Solution {
         }   
         return ans;
     }
+    public int minimumPushesBEST(String word) {
+        int count = word.length();
+        int q = count / 8;
+        int r = count % 8;
+        return (4 * q  + r ) * (q + 1); 
+    }
 }
