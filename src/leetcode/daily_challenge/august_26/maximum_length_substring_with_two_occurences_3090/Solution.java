@@ -18,4 +18,21 @@ public class Solution {
         }
         return maxLen;
     }
+    public int maximumLengthSubstringOptimized(String s) {
+        int[] map = new int[26];
+        int left = 0;
+        int right = 0;
+        int maxLen = 0;
+        for(; right < s.length(); right++) {
+            int charInt = (int)(s.charAt(right) - 'a');
+            map[charInt]++;
+            while(map[charInt] > 2) {
+                int startCharInt = (int)(s.charAt(left) - 'a');
+                map[startCharInt]--;
+                left++;
+            }
+            maxLen = Math.max(right - left + 1, maxLen);
+        }
+        return maxLen;
+    }
 }
