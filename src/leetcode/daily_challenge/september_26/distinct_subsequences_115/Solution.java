@@ -16,3 +16,21 @@ public class Solution {
         return dp[0][0];
     }
 }
+
+
+class SolutionV2 { 
+    public int numDistinct(String s, String t) {
+        if(t.length() > s.length()) {
+            return 0;
+        }
+        int[] dp = new int[t.length() + 1];
+        dp[t.length()] = 1;
+
+        for(int i = s.length() - 1; i >= 0; i--) {
+            for(int j = 0; j < t.length(); j++) {
+                dp[j] = s.charAt(i) == t.charAt(j) ? dp[j] + dp[j + 1] : dp[j];
+            }
+        }
+        return dp[0];
+    }
+}
