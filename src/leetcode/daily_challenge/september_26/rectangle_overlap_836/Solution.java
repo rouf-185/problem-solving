@@ -6,6 +6,6 @@ public class Solution {
         int right = Math.min(rec1[2], rec2[2]);
         int bottom = Math.max(rec1[1], rec2[1]);
         int top = Math.min(rec1[3], rec2[3]);
-        return !((right - left) <= 0 || (top - bottom) <= 0);
+        return (right - left) > 0 && (top - bottom) > 0;
     }
 }
