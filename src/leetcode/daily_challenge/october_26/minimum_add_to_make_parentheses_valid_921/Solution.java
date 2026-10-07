@@ -1,6 +1,6 @@
 package leetcode.daily_challenge.october_26.minimum_add_to_make_parentheses_valid_921; 
 
-class Solution {
+public class Solution {
     // count open bracket and subtract close bracket
     // and when there is no corresponding openbracket for close braket
     // we also count those as additional open bracket
@@ -20,5 +20,21 @@ class Solution {
             }
         }
         return add + open;
+    }
+    
+    public int minAddToMakeValidV0(String s) {
+        Stack<Character> stack = new Stack<>();
+        for(char c : s.toCharArray()) {
+            if(c == '(') {
+                stack.push('(');
+            } else {
+                if(!stack.isEmpty() && stack.peek() == '(') {
+                    stack.pop();
+                } else {
+                    stack.push(')');
+                }
+            }
+        }
+        return stack.size();
     }
 }
