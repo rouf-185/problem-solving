@@ -17,7 +17,7 @@ public class Solution {
         return sb.toString();
     }
     
-    public String removeOuterParentheses(String s) {
+    public String removeOuterParenthesesV2(String s) {
         int d = 0;
         List<int[]> pointers = new ArrayList<>();
         int start = 0;
@@ -35,6 +35,20 @@ public class Solution {
             for(int i = pair[0]; i <= pair[1]; i++){
                 sb.append(s.charAt(i));
             }
+        }
+        return sb.toString();
+    }
+    public String removeOuterParenthesesV3(String s) {
+        int d = 0;
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            d += c == '(' ? 1 : -1;
+            if((c == ')' && d == 0) 
+            || (c == '(' && d == 1)) {
+                continue;
+            } 
+            sb.append(c);
         }
         return sb.toString();
     }
