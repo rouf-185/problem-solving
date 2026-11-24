@@ -24,4 +24,20 @@ public class Solution {
         }
         return maxLen;
     }
+    public int maxLengthV2(int[] nums) {
+        int maxLen = 2;
+        int prod = 1;
+        int left = 0;
+        int right = 0;
+        while(right < nums.length) {
+            while(GCD(prod, nums[right]) > 1) {
+                prod /= nums[left];
+                left++;
+            }
+            prod *= nums[right];
+            maxLen = Math.max(right - left + 1, maxLen);
+            right++;
+        }
+        return maxLen;
+    }
 }
